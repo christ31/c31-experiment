@@ -586,6 +586,11 @@ video {
   margin-bottom: 1rem;
 }
 
+.mx-1 {
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+}
+
 .mb-0 {
   margin-bottom: 0px;
 }
@@ -980,10 +985,6 @@ progress::-webkit-progress-value {
 }
 
 @media (min-width: 1024px) {
-  .lg\:m-4 {
-    margin: 1rem;
-  }
-
   .lg\:mx-4 {
     margin-left: 1rem;
     margin-right: 1rem;
