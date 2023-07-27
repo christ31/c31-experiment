@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1. Video Player</title>
+    <link rel="stylesheet" href="../../dist/output.css" />
+  </head>
+  <body class="flex flex-col w-[100vw] h-[100vh]">
+    <!-- ! Header -->
+    <section id="header" class="relative">
+      <div class="absolute h-full">
+        <div class="flex items-center justify-center px-4 w-full h-full">
+          <a href="../../index.html" class="bg-orange-600 py-2 px-4 rounded-full text-white hover:bg-orange-500 transition-all">
+            <span><<</span> Go Back
+          </a>
+        </div>
+      </div>
+      <div class="text-white font-extrabold text-3xl text-center m-4">
+        C31 Xperiment
+      </div>
+    </section>
+
+    <!-- ! Body -->
+    <section id="body" class="w-full h-full overflow-hidden">
+      <div class="mx-auto lg:w-[90%] h-[98%] bg-gray-300 rounded-lg overflow-auto">
+
+        <div class="c31-video-player flex flex-col bg-gray-900 w-[50%] m-4 rounded-lg">
+          <div class="overflow-hidden rounded-lg w-[100%]">
+            <video id="video1" width="100%" preload="metadata" loop autoplay muted>
+              <source src="../../assets/Kronii waffled.mp4" type="video/mp4">
+              Your browser does not support HTML video.
+            </video>
+          </div>
+
+          <div class="progress-container">
+            <progress id="progress" value="0" min="0">
+              <span id="progress-bar"></span>
+            </progress>
+          </div>
+
+          <div class="flex mx-2 my-4">
+            <button onclick="playPause()" class="c31-button mx-2 w-[100px]">
+              <i id="playPauseSymbol" class="fa-solid fa-pause mr-3" style="color: #ffffff;"></i>
+              <span id="playPauseText">Pause</span>
+            </button>
+
+            <div class="flex text-white items-center font-extrabold">
+              <span id="video-player-time-curr">0:00</span>
+              <span class="text-color-miku">|</span> 
+              <span id="video-player-time-total">0:00</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <label for="file">File progress:</label>
+
+<progress id="file" max="100" value="70"> 70% </progress>
+
+
+    <!-- ! Project Tech -->
+    <section id="projectTech" class="fixed bottom-0 right-3">
+      <div class="p-2">
+        <div id="c31-window" class="c31-window-container h-fit">
+
+          <!--* Title Bar -->
+          <button onclick="hideWindow()" class="c31-window-titlebar">
+            <!-- Left side -->
+            <div class="w-[50px]">
+            </div>
+  
+            <!-- Center side -->
+            <div class="flex">
+              <div class="c31-window-titlebar-title">Project Tech</div>
+            </div>
+  
+            <!-- Right side -->
+            <div class="c31-window-titlebar-button">
+              <div class="c31-window-titlebar-button-minimize"></div>
+              <div class="c31-window-titlebar-button-close"></div>
+            </div>
+          </button>
+  
+          <!--* Content -->
+          <div class="p-3">
+            <p class="c31-window-content-font">1. tailwindcss</p>
+            <p class="c31-window-content-font">2. Vanilla JavaScript</p>
+            <p class="c31-window-content-font">3. Font Awesome</p>
+            <p class="c31-window-content-font font-extrabold ">Build '27 June 2023'</p>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+
+    <!--! BG Watermark  -->
+    <section id="watermark" class="fixed bottom-0 left-0 -z-10">
+      <p class="text-[220px] opacity-10 font-black text-slate-300 mb-0 ml-2 translate-y-[20%]">Xperiment</p>
+    </section>
+
+    <!--! Script buat ngehubungi JS -->
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/da2d57716a.js" crossorigin="anonymous"></script>
+  </body>
+</html>
