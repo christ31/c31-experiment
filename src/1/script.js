@@ -89,3 +89,24 @@ myVideo.addEventListener("timeupdate", () => {
 
 
 
+// ! Header for Mobile
+const goBack = document.getElementById("header-go-back");
+var viewportWidth = window.innerWidth; 
+var viewportHeight = window.innerHeight;
+
+if(viewportWidth<500){
+  goBack.innerText = "<<";
+} 
+
+addEventListener("resize", (event) => {
+  viewportWidth = window.innerWidth; 
+
+  if(viewportWidth<500){
+    goBack.innerText = "<<";
+  } else {
+    goBack.innerText = "<< Go Back";
+  }
+});
+
+
+
