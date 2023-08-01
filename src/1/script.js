@@ -1,19 +1,19 @@
 var myVideo = document.getElementById("video1"); 
 var playPauseText = document.getElementById("playPauseText");
-var playPauseSymbol = document.getElementById("playPauseSymbol");
+var playPauseIcon = document.getElementById("playPauseIcon");
 
 function playPause() { 
   if (myVideo.paused){ 
     myVideo.play();
     playPauseText.textContent = "Pause";
-    playPauseSymbol.classList.remove("fa-play");
-    playPauseSymbol.classList.add("fa-pause");
+    playPauseIcon.classList.remove("fa-play");
+    playPauseIcon.classList.add("fa-pause");
 
   } else { 
     myVideo.pause();
     playPauseText.textContent = "Play";
-    playPauseSymbol.classList.remove("fa-pause");
-    playPauseSymbol.classList.add("fa-play");
+    playPauseIcon.classList.remove("fa-pause");
+    playPauseIcon.classList.add("fa-play");
   }
 } 
 
@@ -87,6 +87,31 @@ myVideo.addEventListener("timeupdate", () => {
 
 });
 
+// ! Mute and Unmute
+const mute = document.getElementById("mute");
+const volumeIcon = document.getElementById("volumeIcon");
+
+mute.addEventListener("click", (e) => {
+  myVideo.muted = !myVideo.muted;
+  if(myVideo.muted){
+    volumeIcon.classList.remove("fa-volume-high");
+    volumeIcon.classList.add("fa-volume-off");
+  } else {
+    volumeIcon.classList.remove("fa-volume-off");
+    volumeIcon.classList.add("fa-volume-high");
+  }
+}); 
+
+// ! Keyboard Event
+document.addEventListener("keydown", (e) => {
+  const keyname = e.key;
+
+  console.log(keyname);
+
+  if (keyname == " "){
+    playPause();
+  }
+})
 
 
 // ! Header for Mobile

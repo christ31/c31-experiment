@@ -25,9 +25,9 @@
     <section id="body" class="w-full h-full overflow-hidden">
       <div class="mx-auto lg:w-[90%] h-[98%] bg-gray-300 rounded-lg overflow-auto">
 
-        <div class="c31-video-player flex flex-col bg-gray-900 lg:w-[50%] m-4 rounded-lg">
+        <div class="c31-video-player flex flex-col bg-gray-900 mx-auto lg:w-[1000px] m-4 rounded-lg">
           <div class="overflow-hidden rounded-lg w-[100%]">
-            <video id="video1" width="100%" preload="metadata" loop autoplay muted>
+            <video id="video1" width="100%" preload="metadata" loop autoplay>
               <source src="../../assets/Kronii waffled.mp4" type="video/mp4">
               Your browser does not support HTML video.
             </video>
@@ -39,17 +39,23 @@
             </progress>
           </div>
 
-          <div class="flex mx-2 my-4">
-            <button onclick="playPause()" class="c31-button mx-2 w-[100px]">
-              <i id="playPauseSymbol" class="fa-solid fa-pause mr-3" style="color: #ffffff;"></i>
+          <div class="flex mx-2 my-2">
+            <button onclick="playPause()" class="c31-button mr-2 w-[100px]">
+              <i id="playPauseIcon" class="fa-solid fa-pause mr-3" style="color: #ffffff;"></i>
               <span id="playPauseText">Pause</span>
             </button>
 
             <div class="flex text-white items-center font-extrabold">
               <span id="video-player-time-curr">0:00</span>
-              <span class="text-color-miku mx-1">|</span> 
+              <span class="text-color-miku mx-1 text-xl">/</span> 
               <span id="video-player-time-total">0:00</span>
             </div>
+
+            <div class="grow"></div>
+
+            <button id="mute" class="c31-button w-[50px] ml-2 justify-items-end">
+              <span id="volumeIcon" class="fa-solid fa-volume-high"></span>
+            </button>
           </div>
         </div>
 
@@ -84,7 +90,7 @@
             <p class="c31-window-content-font">1. tailwindcss</p>
             <p class="c31-window-content-font">2. Vanilla JavaScript</p>
             <p class="c31-window-content-font">3. Font Awesome</p>
-            <p class="c31-window-content-font font-extrabold ">Build '27 June 2023'</p>
+            <p class="c31-window-content-font font-extrabold ">Build '1 August 2023'</p>
           </div>
         </div>
         
@@ -97,7 +103,7 @@
     </section>
 
     <!--! Script buat ngehubungi JS -->
-    <script src="script.js"></script>
+    <script src="script.js"></script>ffff
     <script src="https://kit.fontawesome.com/da2d57716a.js" crossorigin="anonymous"></script>
   </body>
 </html>

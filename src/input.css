@@ -76,7 +76,7 @@ body {
 }
 
 progress {
-  @apply w-full h-[10px] hover:h-[20px] transition-all;
+  @apply w-full h-[5px] transition-all ;
 }
 
 progress[value]::-webkit-progress-bar {
@@ -84,9 +84,9 @@ progress[value]::-webkit-progress-bar {
 }
 
 progress::-moz-progress-bar {
-  background-color: #14b8a6;
+  @apply bg-color-miku;
 }
 
 progress::-webkit-progress-value {
-  background-color: #14b8a6;
+  @apply bg-color-miku;
 }
