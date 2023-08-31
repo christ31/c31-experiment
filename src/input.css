@@ -1,6 +1,10 @@
+/* https://tailwindcss.com/docs/using-with-preprocessors */
+@import "./1/css.css";
+@import "./2/css.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 
 body {
   background-color: #23252e;
@@ -21,7 +25,7 @@ body {
 /* ! C31 Window */
 .c31-window-container{
   @apply mx-4 md:mx-auto max-w-[650px]
-  bg-color-c31-primary bg-opacity-80 backdrop-blur-sm rounded-lg drop-shadow-lg border-2 border-color-miku
+  bg-color-c31-primary bg-opacity-80 backdrop-blur-lg rounded-xl drop-shadow-lg border-2 border-color-miku
   transition-all overflow-hidden;
 }
 
@@ -60,33 +64,20 @@ body {
 ::-webkit-scrollbar{
   height: 15px;
   width: 15px;
-  background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 15px;
-  border: 1px solid #14b8a6;
+  border-radius: 20px;
+  
 }
 
 ::-webkit-scrollbar-thumb{
-  background-color: rgba(255, 255, 255, 0.815);
-  border-radius: 15px;
+  background-color: #14b8a6;
+  border-radius: 20px;
 }
 
-/* ! 1. Video Player */
-.progress-container{
-  @apply flex w-[100%] h-fit rounded-full overflow-hidden;
+::-webkit-scrollbar-thumb:hover{
+  background-color: #10c7b2;
+  border-radius: 20px;
 }
 
-progress {
-  @apply w-full h-[5px] transition-all ;
-}
-
-progress[value]::-webkit-progress-bar {
-  @apply bg-white cursor-pointer;
-}
-
-progress::-moz-progress-bar {
-  @apply bg-color-miku;
-}
-
-progress::-webkit-progress-value {
-  @apply bg-color-miku;
+::-webkit-scrollbar-track{
+  background-color: #23252E;
 }

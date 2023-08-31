@@ -1,0 +1,7 @@
+.dot{
+  @apply h-[15px] w-[15px] rounded-full bg-white shadow-inner;
+}
+
+.dash{
+  @apply h-[2px] bg-white;
+}
