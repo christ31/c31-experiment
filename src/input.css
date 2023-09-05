@@ -16,6 +16,14 @@ body {
   rounded-lg overflow-hidden transition-all;
 }
 
+.c31-card-num {
+  @apply absolute left-0 py-1 px-2 bg-orange-500 rounded-br-lg font-extrabold text-white;
+}
+
+.c31-card-name {
+  @apply flex items-center justify-center text-center px-3 w-full h-full ;
+}
+
 .c31-button {
   @apply flex items-center justify-center py-2 px-4
   bg-color-miku text-white hover:bg-teal-600 active:bg-color-miku-secondary
@@ -65,7 +73,6 @@ body {
   height: 15px;
   width: 15px;
   border-radius: 20px;
-  
 }
 
 ::-webkit-scrollbar-thumb{
